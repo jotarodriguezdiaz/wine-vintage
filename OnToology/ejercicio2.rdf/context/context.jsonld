@@ -1,0 +1,99 @@
+{
+  "@context" : {
+    "" : {
+      "@id" : "https://dbpedia.org/page/Cava_(Spanish_wine)"
+    },
+    "Winery" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Winery"
+    },
+    "numReviews" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#numReviews",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "HighlyValuedWine" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#HighlyValuedWine"
+    },
+    "hasWinery" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#hasWinery",
+      "@type" : "@id"
+    },
+    "isRuleEnabled" : {
+      "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+    },
+    "Ice" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Ice"
+    },
+    "Dessert" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Dessert"
+    },
+    "Fruit" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Fruit"
+    },
+    "Rice" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Rice"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "AcidWine" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#AcidWine"
+    },
+    "White" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#White"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "Sherry" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Sherry"
+    },
+    "Grenache" : {
+      "@id" : "https://dbpedia.org/page/Grenache"
+    },
+    "DeluxeWine" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#DeluxeWine"
+    },
+    "acidity" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#acidity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Red" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Red"
+    },
+    "CountryWine" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#CountryWine"
+    },
+    "Fortified" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Fortified"
+    },
+    "Rosé" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Rosé"
+    },
+    "RiberaDelDueroRed" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#RiberaDelDueroRed"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "price" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#price",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "Sparkling" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Sparkling"
+    },
+    "hasCountry" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#hasCountry",
+      "@type" : "@id"
+    },
+    "Chardonnay" : {
+      "@id" : "https://dbpedia.org/page/Chardonnay"
+    },
+    "Herb" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Herb"
+    },
+    "Wine" : {
+      "@id" : "http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Wine"
+    }
+  }
+}
