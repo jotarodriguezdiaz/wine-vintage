@@ -1,0 +1,376 @@
+@prefix : <http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#> .
+
+<http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage> rdf:type owl:Ontology ;
+                                                                  <http://purl.org/dc/elements/1.1/creator> "José Carlos Rodríguez Díaz" ;
+                                                                  rdfs:label "WineVintage" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#hasCountry
+:hasCountry rdf:type owl:ObjectProperty ;
+            rdfs:domain :Wine ;
+            rdfs:range :CountryWine ;
+            rdfs:comment "country of origin of the wine" .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#hasWinery
+:hasWinery rdf:type owl:ObjectProperty ;
+           rdfs:domain :Wine ;
+           rdfs:range :Winery ;
+           rdfs:comment "the winery producing the wine" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#acidity
+:acidity rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Wine ;
+         rdfs:range xsd:integer ;
+         rdfs:comment "Acidity in wine refers to the tart and sour taste that comes from the presence of acids, which can affect the overall balance, structure, and flavor profile of the wine." .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#numReviews
+:numReviews rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Wine ;
+            rdfs:range xsd:integer ;
+            rdfs:comment "The total count of written evaluations by customers or critics on a product or service." .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#price
+:price rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Wine ;
+       rdfs:range xsd:decimal ;
+       rdfs:comment "Monetary value assigned to a bottle or serving of wine based on factors such as production cost, rarity, and demand." .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#AcidWine
+:AcidWine rdf:type owl:Class ;
+          rdfs:subClassOf :Wine ;
+          rdfs:comment "High acidity wine with tangy taste" .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#CountryWine
+:CountryWine rdf:type owl:Class ;
+             rdfs:comment "country of origin of wine" .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#DeluxeWine
+:DeluxeWine rdf:type owl:Class ;
+            rdfs:subClassOf :Wine ;
+            rdfs:comment "High-quality wine with premium price" .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Dessert
+:Dessert rdf:type owl:Class ;
+         rdfs:subClassOf :Wine ;
+         rdfs:comment "Sweet wine served after a meal" .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Fortified
+:Fortified rdf:type owl:Class ;
+           rdfs:subClassOf :Wine ;
+           rdfs:comment "Wine with added spirits for higher alcohol content" .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Fruit
+:Fruit rdf:type owl:Class ;
+       rdfs:subClassOf :Wine ;
+       rdfs:comment "Wine made from fruits other than grapes" .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Herb
+:Herb rdf:type owl:Class ;
+      rdfs:subClassOf :Wine ;
+      rdfs:comment "Wine flavored with herbs and spices" .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#HighlyValuedWine
+:HighlyValuedWine rdf:type owl:Class ;
+                  rdfs:subClassOf :Wine ;
+                  rdfs:comment "wines with a large number of reviews" .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Ice
+:Ice rdf:type owl:Class ;
+     rdfs:subClassOf :Wine ;
+     rdfs:comment "Sweet wine made from frozen grapes" .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Red
+:Red rdf:type owl:Class ;
+     rdfs:subClassOf :Wine ;
+     rdfs:comment "Wine made from dark grapes with red color" .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#RiberaDelDueroRed
+:RiberaDelDueroRed rdf:type owl:Class ;
+                   rdfs:subClassOf :Red ;
+                   rdfs:comment "Spanish wine region known for its red wines" .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Rice
+:Rice rdf:type owl:Class ;
+      rdfs:subClassOf :Wine ;
+      rdfs:comment "Wine made from fermented rice, also known as sake" .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Rosé
+:Rosé rdf:type owl:Class ;
+      rdfs:subClassOf :Wine ;
+      rdfs:comment "Pink wine made from red grapes" .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Sherry
+:Sherry rdf:type owl:Class ;
+        rdfs:subClassOf :Fortified ;
+        rdfs:comment "Fortified wine from Spain, dry or sweet" .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Sparkling
+:Sparkling rdf:type owl:Class ;
+           rdfs:subClassOf :Wine ;
+           rdfs:comment "Carbonated wine with bubbles" .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#White
+:White rdf:type owl:Class ;
+       rdfs:subClassOf :Wine ;
+       rdfs:comment "Wine made from white grapes or with limited skin contact" .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Wine
+:Wine rdf:type owl:Class ;
+      owl:equivalentClass [ rdf:type owl:Restriction ;
+                            owl:onProperty :acidity ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :numReviews ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :price ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:decimal
+                          ] ;
+      rdfs:comment "fermented alcoholic beverage" .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Winery
+:Winery rdf:type owl:Class ;
+        rdfs:comment "Building or place where wine is made" .
+
+
+###  https://dbpedia.org/page/Chardonnay
+<https://dbpedia.org/page/Chardonnay> rdf:type owl:Class ;
+                                      rdfs:subClassOf :White ;
+                                      rdfs:comment "White grape variety, popular for full-bodied wines" .
+
+
+###  https://dbpedia.org/page/Grenache
+<https://dbpedia.org/page/Grenache> rdf:type owl:Class ;
+                                    rdfs:subClassOf :Rosé ;
+                                    rdfs:comment "Red wine grape variety with fruity flavor" .
+
+
+###  https://dbpedia.org/page/Cava_(Spanish_wine)
+<https://dbpedia.org/page/Cava_(Spanish_wine)> rdf:type owl:Class ;
+                                               rdfs:subClassOf :Sparkling ;
+                                               rdfs:comment "Spanish sparkling wine made with traditional method" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Felix_Solis
+:Felix_Solis rdf:type owl:NamedIndividual ,
+                      :Winery .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Mucho_Mas_Tinto
+:Mucho_Mas_Tinto rdf:type owl:NamedIndividual ;
+                 :hasCountry :Spain ;
+                 :hasWinery :Felix_Solis ;
+                 :acidity 3 ;
+                 :numReviews 32624 ;
+                 :price 499 .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Protos
+:Protos rdf:type owl:NamedIndividual ,
+                 :Winery .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#Spain
+:Spain rdf:type owl:NamedIndividual ,
+                :CountryWine .
+
+
+###  http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#27_Ribera_del_Duero
+<http://www.semanticweb.org/adefe/ontologies/2023/3/WineVintage#27_Ribera_del_Duero> rdf:type owl:NamedIndividual ;
+                                                                                     :hasCountry :Spain ;
+                                                                                     :hasWinery :Protos ;
+                                                                                     :acidity 3 ;
+                                                                                     :numReviews 3725 ;
+                                                                                     :price 21 .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/w> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/p> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/a> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Muy valorado" ;
+   rdfs:label "HighlyValuedRule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Wine ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/w>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :numReviews ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/w> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/r> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 4000 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :HighlyValuedWine ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/w>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Vinos ácidos mayores de 3" ;
+   rdfs:label "AcidRule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :acidity ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/w> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/a>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Wine ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/w>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/a> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 3 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :AcidWine ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/w>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Aquellos vinos que superan los 300 euros" ;
+   rdfs:label "DeluxeRule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Wine ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/w>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :price ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/w> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/p>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/p> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 300 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :DeluxeWine ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adefe/ontologies/2023/3/untitled-ontology-4/w>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

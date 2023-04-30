@@ -1,0 +1,24 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "WineVintage:Fortified" "WineVintage:White" "WineVintage:DeluxeWine" "WineVintage:Sparkling" "https://dbpedia.org/page/Grenache" "WineVintage:Rice" "WineVintage:Rosé" "https://dbpedia.org/page/Cava_(Spanish_wine)" "WineVintage:Wine" "WineVintage:Ice" "https://dbpedia.org/page/Chardonnay" "WineVintage:HighlyValuedWine" "WineVintage:Herb" "WineVintage:AcidWine" "WineVintage:RiberaDelDueroRed" "WineVintage:Red" "WineVintage:Sherry" "WineVintage:Fruit" "WineVintage:Dessert" ; /*classes style*/
+	"WineVintage:Rice" -> "WineVintage:Wine" [ label = "rdfs:subClassOf" ];
+	"WineVintage:RiberaDelDueroRed" -> "WineVintage:Red" [ label = "rdfs:subClassOf" ];
+	"WineVintage:Red" -> "WineVintage:Wine" [ label = "rdfs:subClassOf" ];
+	"WineVintage:Dessert" -> "WineVintage:Wine" [ label = "rdfs:subClassOf" ];
+	"WineVintage:White" -> "WineVintage:Wine" [ label = "rdfs:subClassOf" ];
+	"WineVintage:DeluxeWine" -> "WineVintage:Wine" [ label = "rdfs:subClassOf" ];
+	"WineVintage:AcidWine" -> "WineVintage:Wine" [ label = "rdfs:subClassOf" ];
+	"WineVintage:Sherry" -> "WineVintage:Fortified" [ label = "rdfs:subClassOf" ];
+	"WineVintage:HighlyValuedWine" -> "WineVintage:Wine" [ label = "rdfs:subClassOf" ];
+	"https://dbpedia.org/page/Grenache" -> "WineVintage:Rosé" [ label = "rdfs:subClassOf" ];
+	"https://dbpedia.org/page/Chardonnay" -> "WineVintage:White" [ label = "rdfs:subClassOf" ];
+	"WineVintage:Ice" -> "WineVintage:Wine" [ label = "rdfs:subClassOf" ];
+	"WineVintage:Sparkling" -> "WineVintage:Wine" [ label = "rdfs:subClassOf" ];
+	"WineVintage:Fruit" -> "WineVintage:Wine" [ label = "rdfs:subClassOf" ];
+	"WineVintage:Fortified" -> "WineVintage:Wine" [ label = "rdfs:subClassOf" ];
+	"WineVintage:Herb" -> "WineVintage:Wine" [ label = "rdfs:subClassOf" ];
+	"https://dbpedia.org/page/Cava_(Spanish_wine)" -> "WineVintage:Sparkling" [ label = "rdfs:subClassOf" ];
+	"WineVintage:Rosé" -> "WineVintage:Wine" [ label = "rdfs:subClassOf" ];
+
+}
